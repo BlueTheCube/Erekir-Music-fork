@@ -6,4 +6,5 @@ description: "Adds new music to Erekir.\n\nMusic by Saigo no-nozomi.\nProgrammed
 version: "1.2.0"
 minGameVersion: 145
 hidden: true
+hideBrowser: true
 java: true
