@@ -37,24 +37,9 @@ public class ErekirMusicMod extends Mod {
             vAmbient = control.ambientMusic.copy();
             vDark = control.darkMusic.copy();
             vBoss = control.bossMusic.copy();
-        });
-
-        Events.on(WorldLoadEvent.class, e -> {
-            if (Vars.state.rules.planet == Planets.erekir) {
-                // Inject custom music here.
-                control.ambientMusic = modAmbient;
-                control.darkMusic = modDark;
-                control.bossMusic = modBoss;
-            }
-        });
-
-        Events.on(StateChangeEvent.class, e -> {
-            if (e.from != GameState.State.menu && e.to == GameState.State.menu) {
-                // Reset music upon going to main menu.
-                control.ambientMusic = vAmbient;
-                control.darkMusic = vDark;
-                control.bossMusic = vBoss;
-            }
+            control.ambientMusic.addAll(modAmbient);
+            control.darkMusic.addAll(modDark);
+            control.bossMusic.addAll(modBoss);
         });
     }
 }
