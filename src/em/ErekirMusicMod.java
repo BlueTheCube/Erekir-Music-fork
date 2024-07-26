@@ -40,9 +40,6 @@ public class ErekirMusicMod extends Mod {
             control.ambientMusic.addAll(modAmbient);
             control.darkMusic.addAll(modDark);
             control.bossMusic.addAll(modBoss);
-            control.bossMusic.removeAll(vDark);
-            control.bossMusic.addAll(vDark);
-            control.bossMusic.addAll(modDark);
         });
     }
 }
