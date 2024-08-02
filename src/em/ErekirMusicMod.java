@@ -42,7 +42,7 @@ public class ErekirMusicMod extends Mod {
             control.darkMusic.addAll(modDark);
             control.bossMusic.addAll(modBoss);
             control.bossMusic.add(modDark.get(0));
-            control.bossMusic.add(modDark.get(2));
+            control.bossMusic.add(modDark.get(3));
         });
     }
 }
