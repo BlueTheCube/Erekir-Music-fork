@@ -8,6 +8,7 @@ import mindustry.audio.SoundControl;
 import mindustry.content.Planets;
 import mindustry.core.GameState;
 import mindustry.mod.Mod;
+import mindustry.gen.*;
 
 import static em.content.EMusic.*;
 import static mindustry.game.EventType.*;
@@ -40,6 +41,7 @@ public class ErekirMusicMod extends Mod {
             control.ambientMusic.addAll(modAmbient);
             control.darkMusic.addAll(modDark);
             control.bossMusic.addAll(modBoss);
+            control.bossMusic.add(modDark.get(2));
         });
     }
 }
